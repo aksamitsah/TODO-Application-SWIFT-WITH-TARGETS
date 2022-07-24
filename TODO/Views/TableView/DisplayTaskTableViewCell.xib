@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ResDisplayTaskTableViewCell" rowHeight="76" id="KGk-i7-Jjw" customClass="DisplayTaskTableViewCell" customModule="TODO" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="324" height="76"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="324" height="76"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="IPE-DR-W0W">
+                        <rect key="frame" x="20" y="5" width="284" height="66"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="K8k-Uv-8Wx">
+                                <rect key="frame" x="10" y="4" width="264" height="58"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GL7-3h-F3s">
+                                        <rect key="frame" x="0.0" y="9" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="9fQ-Aa-RIn"/>
+                                            <constraint firstAttribute="width" constant="40" id="Tnb-U5-rcN"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" backgroundImage="ic_checkbox"/>
+                                        <connections>
+                                            <action selector="onTaskCompleated:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="jGo-2a-sZc"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZ8-Fy-GGE">
+                                        <rect key="frame" x="40" y="19.5" width="144" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dd mm yyyy" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdB-rw-B0X">
+                                        <rect key="frame" x="184" y="23" width="80" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="Iye-kD-xTG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="GL7-3h-F3s" firstAttribute="leading" secondItem="K8k-Uv-8Wx" secondAttribute="leading" id="RwC-3G-mRZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="tdB-rw-B0X" secondAttribute="trailing" id="yAc-f9-RaT"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="primary"/>
+                        <constraints>
+                            <constraint firstItem="K8k-Uv-8Wx" firstAttribute="top" secondItem="IPE-DR-W0W" secondAttribute="top" constant="4" id="6Ou-Vo-0ql"/>
+                            <constraint firstAttribute="bottom" secondItem="K8k-Uv-8Wx" secondAttribute="bottom" constant="4" id="HTO-EO-w1V"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="WV6-xl-RCI"/>
+                            <constraint firstItem="K8k-Uv-8Wx" firstAttribute="leading" secondItem="IPE-DR-W0W" secondAttribute="leading" constant="10" id="WZ7-hL-hKh"/>
+                            <constraint firstAttribute="trailing" secondItem="K8k-Uv-8Wx" secondAttribute="trailing" constant="10" id="y0M-Uc-eZB"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="IPE-DR-W0W" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="3Ab-bJ-Bx1"/>
+                    <constraint firstAttribute="trailing" secondItem="IPE-DR-W0W" secondAttribute="trailing" constant="20" id="9M0-Au-W9m"/>
+                    <constraint firstAttribute="bottom" secondItem="IPE-DR-W0W" secondAttribute="bottom" constant="5" id="WoY-Xp-i42"/>
+                    <constraint firstItem="IPE-DR-W0W" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="qdN-s3-1dT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="date" destination="tdB-rw-B0X" id="mVB-q6-Lfr"/>
+                <outlet property="isTaskCompleatedBtn" destination="GL7-3h-F3s" id="j6y-na-4NQ"/>
+                <outlet property="mainUI" destination="IPE-DR-W0W" id="XXC-eg-vMX"/>
+                <outlet property="taskName" destination="CZ8-Fy-GGE" id="vNk-qB-HJW"/>
+            </connections>
+            <point key="canvasLocation" x="134.78260869565219" y="72.321428571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_checkbox" width="24" height="24"/>
+        <namedColor name="primary">
+            <color red="0.20784313725490194" green="0.34509803921568627" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
