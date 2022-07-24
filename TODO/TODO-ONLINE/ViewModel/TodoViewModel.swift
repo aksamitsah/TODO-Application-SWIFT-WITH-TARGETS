@@ -8,12 +8,6 @@
 import Foundation
 import UIKit
 
-struct ImagesCloud{
-    static let cloudOfflineIcon = UIImage.init(systemName: "exclamationmark.icloud.fill")
-    static let cloudOnlineIcon = UIImage.init(systemName: "checkmark.icloud.fill")
-}
-
-
 class TodoViewModel{
     
     weak var vc: TodoViewController?
@@ -66,10 +60,10 @@ class TodoViewModel{
     
     func reachNetwork() {
         if Reachability.isConnectedToNetwork(){
-            vc?.cloud_btn.setBackgroundImage(ImagesCloud.cloudOnlineIcon, for: .normal)
+            vc?.cloud_btn.setBackgroundImage(UIImage.init(systemName: "checkmark.icloud.fill"), for: .normal)
         }
         else{
-            vc?.cloud_btn.setBackgroundImage(ImagesCloud.cloudOfflineIcon, for: .normal)
+            vc?.cloud_btn.setBackgroundImage(UIImage.init(systemName: "exclamationmark.icloud.fill"), for: .normal)
         }
     }
     
