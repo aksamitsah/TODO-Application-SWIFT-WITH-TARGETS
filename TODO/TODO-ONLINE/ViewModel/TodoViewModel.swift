@@ -56,6 +56,7 @@ class TodoViewModel{
         reachNetwork()
         FirebaseHelper.sharedInstance.remove(data: DatabaseHelper.sharedInstance.get()[index])
         DatabaseHelper.sharedInstance.delete(index: index)
+        isTaskEditable(false, index: 0)
     }
     
     func reachNetwork() {
